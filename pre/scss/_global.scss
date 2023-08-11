@@ -1,0 +1,100 @@
+/* -- Global.scss -- */
+/* 反白選取樣式 */
+::-moz-selection {
+    background-color: #9EBCA8;
+    color: color(dark);
+}
+
+::selection {
+    background-color: #9EBCA8;
+    color: color(dark);
+}
+
+::-webkit-scrollbar {
+    width: size(8);
+    background-color: transparent;
+    border-radius: size(4);
+}
+
+::-webkit-scrollbar-thumb {
+    width: size(8);
+    background-color: #718530;
+    border-radius: size(4);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Jin Xuan', 'Noto Serif TC', serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background-image: url(../img/bg.png);
+    background-color: #fcfcfd;
+    line-height: 2;
+    @include font(15);
+    color: color(gray);
+    width: 100dvw;
+    height: 100svh;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-family: 'Baskerville', serif;
+    font-size: size(48);
+    letter-spacing: size(1);
+    font-weight: weight(Regular);
+    min-width: max-content;
+    position: relative;
+    margin-bottom: size(120);
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: size(24);
+        height: size(2);
+        background-color: color(gray);
+    }
+}
+
+h3 {
+    font-size: size(32);
+    font-weight: weight(SemiBold);
+    letter-spacing: size(2);
+    text-align: center;
+    line-height: 1.5;
+
+    span {
+        display: block;
+        font-size: size(16);
+        letter-spacing: size(11);
+        transform: translateX(size(1));
+        overflow: hidden;
+    }
+}
+
+a {
+    @include a-color;
+    text-decoration: none;
+}
+
+ul {
+    margin-top: size(24);
+    line-height: 2;
+}
+
+@include max-to(pad) {
+    body {
+        @include font(13);
+    }
+}

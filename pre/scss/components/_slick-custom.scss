@@ -1,0 +1,103 @@
+.slick {
+    margin-bottom: 0 !important;
+
+    .slick-arrow {
+        top: auto;
+        bottom: size(80);
+        width: auto;
+        height: auto;
+        display: flex;
+        gap: size(4);
+        align-items: center;
+        z-index: 5;
+        font-size: size(20);
+        font-weight: 800;
+        letter-spacing: size(1);
+        padding: size(8) size(4);
+        border-radius: 0;
+        border-bottom: size(1) solid white;
+        color: white;
+        font-family: 'Outfit', Arial, sans-serif;
+        transition: transform .2s;
+        backdrop-filter: blur(size(1));
+
+        &::before {
+            opacity: 1;
+        }
+
+        &.slick-prev {
+            left: size(64);
+
+            &::before {
+                content: url(../img/icon/arrowL.svg);
+            }
+        }
+
+        &.slick-next {
+            right: size(64);
+
+            &::before {
+                content: url(../img/icon/arrowL.svg);
+                transform: rotate(180deg);
+                order: 2;
+            }
+        }
+
+        &:hover {
+            box-shadow: none;
+
+            &.slick-prev {
+                transform: translate(size(-8), -50%);
+            }
+
+            &.slick-next {
+                transform: translate(size(8), -50%);
+            }
+        }
+    }
+
+    .slick-dots {
+        bottom: size(32);
+
+        li {
+            height: size(3);
+            width: size(50);
+
+            button {
+                height: size(3);
+                width: size(50);
+
+                &::before {
+                    content: '';
+                    height: size(3);
+                    width: size(50);
+                    background-color: white;
+                    transition: opacity .3s;
+                }
+
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    @include max-to(pad) {
+        .slick-arrow {
+            bottom: size(20);
+
+            &.slick-prev {
+                left: size(24);
+            }
+
+            &.slick-next {
+                right: size(24);
+            }
+        }
+
+        .slick-dots {
+            bottom: auto;
+            top: 90svw;
+        }
+    }
+}
