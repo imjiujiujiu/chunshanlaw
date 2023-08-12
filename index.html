@@ -17,11 +17,8 @@
     <!-- share info -->
     <meta property="og:locale" content="zh-Hant" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://imjiujiujiu.github.io/chang&duann/img/og-image.png" />
+    <meta property="og:image" content="https://imjiujiujiu.github.io/chunshanlaw/img/og-image.png" />
     <link rel=”apple-touch-icon” href=”img/apple-touch-icon.png”>
-
-    <!-- AOS 套件 -->
-    <link href="vendor/aos/aos.css" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -37,10 +34,10 @@
             <img src="img/mountain-3.svg">
         </div>
 
-        <img class="main-logo" src="img/logo.svg">
-
-        <button class="menu"><img src="img/menu.svg"></button>
-
+        <header>
+            <img class="main-logo" src="img/logo.svg">
+            <button class="menu"><img src="img/menu.svg"></button>
+        </header>
         <nav>
             <!-- <ul>
                 <li for="home">首頁</li>
@@ -144,12 +141,12 @@
         <section id="contact">
             <h2>Contact</h2>
             <p>群山法律事務所</p>
-            <p>CHANG AND DU ANN A T TORNEYS-AT-LAW</p>
+            <p>CHANG AND DUANN ATTORNEYS-AT-LAW</p>
             <ul>
                 <li>地址｜臺中市西區英才路530號19樓之6(臺中國泰金融大樓)</li>
                 <li>市話｜04-12345678</li>
                 <li>傳真｜04-87654321</li>
-                <li>Mail｜<a href="mailto:service@changnduann.com" target="_blank">service@changnduann.com</a></li>
+                <li>Mail｜<a href="mailto:service@chunshanlaw.com" target="_blank">service@chunshanlaw.com</a></li>
             </ul>
         </section>
 
@@ -171,7 +168,7 @@
                 <li>臺中市西區英才路530號19樓之6</li>
                 <li>04-12345678</li>
                 <li>04-87654321</li>
-                <li><a href="mailto:service@changnduann.com" target="_blank">service@changnduann.com</a></li>
+                <li><a href="mailto:service@chunshanlaw.com" target="_blank">service@chunshanlaw.com</a></li>
             </ul>
         </footer>
     </div>
@@ -181,6 +178,19 @@
     <!-- jQuery -->
     <script src="vendor/jquery.min.js"></script>
     <script type="text/javascript">
+        if ($(window).width() > 1024) {
+            $(window).scroll(function () {
+                var scrollHeight = $(window).scrollTop();
+
+                if (scrollHeight > 90) {
+                    console.log('scrolled')
+                    $('header').addClass('shrink');
+                } else {
+                    $('header').removeClass('shrink');
+                }
+            });
+        }
+
         $('.menu').click(function () {
             $('nav').toggleClass('active')
 

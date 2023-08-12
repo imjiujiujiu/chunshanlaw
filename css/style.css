@@ -526,7 +526,6 @@ html {
 
 * {
   font-family: "Jin Xuan", "Noto Serif TC", serif;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -540,6 +539,7 @@ body {
   color: #3E3A39;
   width: 100dvw;
   height: 100svh;
+  overflow-x: hidden;
 }
 
 img {
@@ -708,35 +708,44 @@ ul {
   }
 }
 
-.main-logo {
+header .main-logo {
   position: fixed;
   left: 3.75rem;
   top: 3.75rem;
   width: 11.25rem;
 }
-@media (max-width: 48rem) {
-  .main-logo {
-    top: 1.5rem;
-    left: 1.25rem;
-    max-width: 30svw;
-    -webkit-backdrop-filter: blur(0.125rem);
-            backdrop-filter: blur(0.125rem);
-    z-index: 5;
-  }
-}
-
-.menu {
+header .menu {
   display: none;
 }
 @media (max-width: 48rem) {
-  .menu {
-    z-index: 9;
-    display: inherit;
+  header {
     position: fixed;
-    top: 1.25rem;
-    right: 1.25rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 8;
+    display: flex;
+    justify-content: space-between;
     -webkit-backdrop-filter: blur(0.125rem);
             backdrop-filter: blur(0.125rem);
+    background-color: rgba(238, 240, 242, 0.5);
+    background-image: url(../img/bg.png);
+  }
+  header .main-logo {
+    position: initial;
+    max-width: 20svw;
+  }
+  header .menu {
+    z-index: 9;
+    position: initial;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.0625rem solid rgba(62, 58, 57, 0.3);
   }
 }
 
@@ -781,7 +790,9 @@ nav ul li:hover {
     background-color: rgba(250, 252, 250, 0.9);
     -webkit-backdrop-filter: blur(0.125rem);
             backdrop-filter: blur(0.125rem);
-    z-index: 8;
+    background-color: rgba(238, 240, 242, 0.5);
+    background-image: url(../img/bg.png);
+    z-index: 5;
     overflow: hidden;
     transition: bottom 0.3s;
   }
@@ -942,6 +953,9 @@ section::before {
   }
 }
 @media (max-width: 48rem) {
+  #attorneys {
+    background-position: bottom 15rem right -10svw;
+  }
   #attorneys > div {
     gap: 2.5rem 0;
   }

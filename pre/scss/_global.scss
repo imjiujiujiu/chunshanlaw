@@ -28,7 +28,6 @@ html {
 
 * {
     font-family: 'Jin Xuan', 'Noto Serif TC', serif;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -41,6 +40,7 @@ body {
     color: color(gray);
     width: 100dvw;
     height: 100svh;
+    overflow-x: hidden;
 }
 
 img {
