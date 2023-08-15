@@ -202,9 +202,6 @@ form input[type=text] {
 form input[type=text]::-moz-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
-form input[type=text]:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
 form input[type=text]::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -221,9 +218,6 @@ form input[disabled] {
   border-color: rgba(255, 255, 255, 0.3);
 }
 form input[disabled]::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-form input[disabled]:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 form input[disabled]::placeholder {
@@ -292,7 +286,6 @@ form input[disabled]:hover {
   margin-right: -1.5rem;
   padding-right: 1.5rem;
   max-height: calc(80svh - 12.25rem);
-  min-height: -webkit-max-content;
   min-height: -moz-max-content;
   min-height: max-content;
 }
@@ -551,7 +544,6 @@ h2 {
   font-size: 3rem;
   letter-spacing: 0.0625rem;
   font-weight: 400;
-  min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
   position: relative;
@@ -614,22 +606,19 @@ ul {
   width: 80svw;
   left: -10svw;
   bottom: 0;
-  -webkit-animation: mountain1 15s both;
-          animation: mountain1 15s both;
+  animation: mountain1 15s both;
 }
 .mountains img:nth-child(2) {
   width: 70svw;
   right: 5svw;
   bottom: 15svw;
-  -webkit-animation: mountain2 15s both;
-          animation: mountain2 15s both;
+  animation: mountain2 15s both;
 }
 .mountains img:last-child {
   width: 65svw;
   right: -10svw;
   bottom: 5svw;
-  -webkit-animation: mountain3 15s both;
-          animation: mountain3 15s both;
+  animation: mountain3 15s both;
 }
 @media (max-width: 48rem) {
   .mountains {
@@ -651,14 +640,6 @@ ul {
     bottom: 10svw;
   }
 }
-@-webkit-keyframes mountain1 {
-  0% {
-    transform: translate(-0.625rem, -2.5rem);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
 @keyframes mountain1 {
   0% {
     transform: translate(-0.625rem, -2.5rem);
@@ -667,29 +648,9 @@ ul {
     transform: translate(0, 0);
   }
 }
-@-webkit-keyframes mountain2 {
-  0% {
-    transform: translate(0, 2.5rem) scale(0.8);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-}
 @keyframes mountain2 {
   0% {
     transform: translate(0, 2.5rem) scale(0.8);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(0, 0) scale(1);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes mountain3 {
-  0% {
-    transform: translate(3.75rem, -0.625rem) scale(0.8);
     opacity: 0.5;
   }
   100% {
@@ -762,7 +723,6 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   margin-top: 0;
@@ -907,6 +867,7 @@ section::before {
 }
 #attorneys > div .desc dd {
   font-weight: 300;
+  text-align: justify;
 }
 #attorneys > div .desc dd + dt {
   margin-top: 1.25rem;
@@ -993,7 +954,7 @@ section::before {
 }
 @media (max-width: 48rem) {
   #contact::before,
-#partner::before {
+  #partner::before {
     bottom: 0;
   }
 }
@@ -1032,4 +993,4 @@ footer ul li:not(:last-child)::after {
   footer ul {
     flex-wrap: wrap;
   }
-}/*# sourceMappingURL=style.css.map */
+}

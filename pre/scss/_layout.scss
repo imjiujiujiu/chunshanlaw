@@ -95,7 +95,7 @@ header {
         top: size(60);
         width: size(180);
     }
-    
+
     .menu {
         display: none;
     }
@@ -118,7 +118,7 @@ header {
             // max-width: 30svw;
             max-width: 20svw;
         }
-    
+
         .menu {
             z-index: 9;
             position: initial;
@@ -132,7 +132,7 @@ header {
         }
     }
 }
-    
+
 nav {
     position: fixed;
     left: size(60);
@@ -155,7 +155,7 @@ nav {
             word-break: keep-all;
         }
     }
-    
+
     @include max-to(small-pad) {
         display: flex;
         align-items: center;
@@ -288,6 +288,7 @@ section {
 
             dd {
                 font-weight: weight(Light);
+                text-align: justify;
 
                 +dt {
                     margin-top: size(20);
