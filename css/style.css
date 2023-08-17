@@ -620,7 +620,7 @@ ul {
   bottom: 5svw;
   animation: mountain3 15s both;
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   .mountains {
     height: 105dvh;
   }
@@ -678,7 +678,7 @@ header .main-logo {
 header .menu {
   display: none;
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   header {
     position: fixed;
     top: 0;
@@ -709,6 +709,18 @@ header .menu {
     border: 0.0625rem solid rgba(62, 58, 57, 0.3);
   }
 }
+@media (max-width: 1024px) and (orientation: landscape) {
+  header {
+    background-image: none;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    background: linear-gradient(to bottom, rgba(238, 240, 242, 0.8) 0%, rgba(238, 240, 242, 0.5) 30%, rgba(238, 240, 242, 0) 100%);
+  }
+  header .main-logo {
+    max-height: 15svh;
+  }
+}
 
 nav {
   position: fixed;
@@ -737,7 +749,7 @@ nav ul li {
 nav ul li:hover {
   color: #718530;
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   nav {
     display: flex;
     align-items: center;
@@ -770,6 +782,14 @@ nav ul li:hover {
     bottom: 0;
   }
 }
+@media (max-width: 1024px) and (orientation: landscape) {
+  nav ul {
+    line-height: 2;
+  }
+  nav.active {
+    padding-top: calc(15svh + 2rem);
+  }
+}
 
 .deco {
   position: absolute;
@@ -788,7 +808,7 @@ nav ul li:hover {
   flex: 100%;
   text-align: center;
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   .deco {
     top: 45%;
     right: 2.5rem;
@@ -807,12 +827,12 @@ section::before {
   position: absolute;
   content: "";
 }
-@media (max-width: 64rem) {
+@media (max-width: 48rem) {
   section {
     padding-left: 40svw;
   }
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   section {
     min-height: 90svh;
     padding: calc(30svw + 1.25rem) 2rem 2rem !important;
@@ -913,7 +933,7 @@ section::before {
     width: 90svw;
   }
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   #attorneys {
     background-position: bottom 15rem right -10svw;
   }
@@ -952,7 +972,7 @@ section::before {
   left: -40svw;
   width: 160svw;
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   #contact::before,
   #partner::before {
     bottom: 0;
@@ -980,7 +1000,7 @@ footer ul li {
 footer ul li:not(:last-child)::after {
   content: "｜";
 }
-@media (max-width: 48rem) {
+@media (max-width: 64rem) {
   footer {
     padding: 3.75rem 1rem 1.25rem;
   }
@@ -993,4 +1013,4 @@ footer ul li:not(:last-child)::after {
   footer ul {
     flex-wrap: wrap;
   }
-}
+}/*# sourceMappingURL=style.css.map */

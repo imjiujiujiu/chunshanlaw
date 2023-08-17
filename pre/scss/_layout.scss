@@ -28,7 +28,7 @@
         }
     }
 
-    @include max-to(small-pad) {
+    @include max-to(pad) {
         height: 105dvh;
 
         img {
@@ -100,7 +100,7 @@ header {
         display: none;
     }
 
-    @include max-to(small-pad) {
+    @include max-to(pad) {
         position: fixed;
         top: 0;
         left: 0;
@@ -115,7 +115,6 @@ header {
 
         .main-logo {
             position: initial;
-            // max-width: 30svw;
             max-width: 20svw;
         }
 
@@ -129,6 +128,17 @@ header {
             align-items: center;
             justify-content: center;
             border: size(1) solid rgba(color(gray), .3);
+        }
+    }
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+        background-image: none;
+        background-color: transparent;
+        backdrop-filter: none;
+        background: linear-gradient(to bottom, rgba(color(bg), .8) 0%, rgba(color(bg), .5) 30%, rgba(color(bg), 0) 100%);
+
+        .main-logo {
+            max-height: 15svh;
         }
     }
 }
@@ -156,7 +166,7 @@ nav {
         }
     }
 
-    @include max-to(small-pad) {
+    @include max-to(pad) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -187,6 +197,16 @@ nav {
             bottom: 0;
         }
     }
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+        ul {
+            line-height: 2;
+        }
+
+        &.active {
+            padding-top: calc(15svh + size(32));
+        }
+    }
 }
 
 .deco {
@@ -207,7 +227,7 @@ nav {
         text-align: center;
     }
 
-    @include max-to(small-pad) {
+    @include max-to(pad) {
         top: 45%;
         right: size(40);
         transform: translateY(-50%);
@@ -226,11 +246,11 @@ section {
         content: '';
     }
 
-    @include max-to(pad) {
+    @include max-to(small-pad) {
         padding-left: 40svw;
     }
 
-    @include max-to(small-pad) {
+    @include max-to(pad) {
         min-height: 90svh;
         padding: calc(30svw + size(20)) size(32) size(32) !important;
     }
@@ -350,8 +370,8 @@ section {
     }
 
 
-    // small-pad ~ 768
-    @include max-to(small-pad) {
+    // pad ~ 768
+    @include max-to(pad) {
         background-position: bottom size(240) right -10svw;
 
         >div {
@@ -394,7 +414,7 @@ section {
         width: 160svw;
     }
 
-    @include max-to(small-pad) {
+    @include max-to(pad) {
         &::before {
             bottom: 0;
         }
@@ -429,8 +449,8 @@ footer {
         }
     }
 
-    // small-pad ~ 768
-    @include max-to(small-pad) {
+    // pad ~ 768
+    @include max-to(pad) {
         padding: size(60) size(16) size(20);
 
         span {
