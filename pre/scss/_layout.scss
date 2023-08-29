@@ -352,7 +352,7 @@ section {
                     position: absolute;
                     top: 0;
                     right: 0;
-                    max-width: 18svw;
+                    max-width: 20svw;
                 }
             }
         }
@@ -370,8 +370,8 @@ section {
     }
 
 
-    // pad ~ 768
-    @include max-to(pad) {
+    // small-pad ~ 768
+    @include max-to(small-pad) {
         background-position: bottom size(240) right -10svw;
 
         >div {

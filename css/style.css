@@ -921,7 +921,7 @@ section::before {
     position: absolute;
     top: 0;
     right: 0;
-    max-width: 18svw;
+    max-width: 20svw;
   }
   #attorneys::before {
     top: 25%;
@@ -933,7 +933,7 @@ section::before {
     width: 90svw;
   }
 }
-@media (max-width: 64rem) {
+@media (max-width: 48rem) {
   #attorneys {
     background-position: bottom 15rem right -10svw;
   }
