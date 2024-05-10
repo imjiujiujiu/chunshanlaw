@@ -104,3 +104,12 @@ $colors: (
 
 // 用法：
 // @include a-color(color(primary),color(primary-6));
+
+
+@mixin hover {
+    @media (hover:hover) {
+        &:hover {
+            @content;
+        }
+    }
+}

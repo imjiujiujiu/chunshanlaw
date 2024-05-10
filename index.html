@@ -51,13 +51,6 @@
             <button class="menu"><img src="img/menu.svg"></button>
         </header>
         <nav>
-            <!-- <ul>
-                <li for="home">首頁</li>
-                <li for="about">關於群山</li>
-                <li for="attorneys">律師介紹</li>
-                <li for="contact">聯絡方式</li>
-                <li for="partner">合作夥伴</li>
-            </ul> -->
             <ul>
                 <li><a href="#app">首頁</a></li>
                 <li><a href="#about">關於群山</a></li>
@@ -103,6 +96,8 @@
                     <dd>經濟部水利署中區水資源局土石清淤廉能透明座談會講座</dd>
                     <dd>行政院農業委員會林務局南投林區管理處森林護管員教育訓練講座</dd>
                     <dd>國立臺中第二高級中學傑出校友</dd>
+                    <dd>經濟部水利署第四河川局國家賠償事件處理及員工因公涉訟法律諮詢委員</dd>
+                    <dd>農業部林業及自然保育署屏東分署墾丁森林遊樂區海濱區之遊樂設施區投資經營協調委員會委員</dd>
 
                     <dt>簡介</dt>
                     <dd>
@@ -124,6 +119,8 @@
                     <dt>經歷</dt>
                     <dd>臺中地方法院法官</dd>
                     <dd>雲林地方法院法官</dd>
+                    <dd>勞動部工作場所性騷擾調查專業人才</dd>
+                    <dd>南投縣政府醫療調解會委員</dd>
 
                     <dt>簡介</dt>
                     <dd>段奇琬律師擔任民、刑事法官共計十餘年，曾任勞工庭、醫療庭，辦案經驗豐富，並曾獲傑賽普國際模擬法庭臺灣區冠軍暨傑出辯士，精通英語。</dd>
@@ -143,6 +140,7 @@
                     <dd>南投地方法院民事庭法官兼庭長</dd>
                     <dd>彰化地方檢察署檢察官</dd>
                     <dd>高雄地方檢察署檢察官</dd>
+                    <dd>勞動部工作場所性騷擾調查專業人才</dd>
 
                     <dt>簡介</dt>
                     <dd>
@@ -157,20 +155,20 @@
             <p>群山法律事務所</p>
             <p>CHANG AND DUANN ATTORNEYS-AT-LAW</p>
             <ul>
-                <li>地址｜臺中市西區英才路530號19樓之6<br>　　　(臺中國泰金融大樓)</li>
-                <li>電話｜04-23012868</li>
-                <li>傳真｜04-23017306</li>
+                <li>地址｜<a href="https://maps.app.goo.gl/5EUToJSr8MEnYPnS9" target="_blank">臺中市西區英才路530號19樓之6</a><br>　　　(臺中國泰金融大樓)</li>
+                <li>電話｜<a href="tel:+886-4-23012868" target="_blank">04-23012868</a></li>
+                <li>傳真｜<a href="tel:+886-4-23017306" target="_blank">04-23017306</a></li>
                 <li>Mail｜<a href="mailto:service@chunshanlaw.com" target="_blank">service@chunshanlaw.com</a></li>
             </ul>
         </section>
 
         <section id="partner">
             <h2>Partner</h2>
-            <p>蕭奕弘律師事務所（臺北）<br><a href="https://attorney.idozone.com.tw"
-                    target="_blank">https://attorney.idozone.com.tw</a></p>
+            <p>蕭奕弘律師事務所（臺北）<br><a href="https://attorney.idozone.com.tw" target="_blank">https://attorney.idozone.com.tw</a></p>
             <p>&nbsp;</p>
-            <p>春風海法律事務所（高雄）<br><a href="https://www.oceanus-vent.com" target="_blank">https://www.oceanus-vent.com</a>
-            </p>
+            <p>春風海法律事務所（高雄）<br><a href="https://www.oceanus-vent.com" target="_blank">https://www.oceanus-vent.com</a></p>
+            <p>&nbsp;</p>
+            <p>玉山律師代書聯合事務所（不動產開發）<br><a href="https://www.esunlaw.idv.tw/" target="_blank">https://www.esunlaw.idv.tw/</a></p>
         </section>
 
         <footer>
@@ -179,11 +177,26 @@
                 <span>CHANG AND DUANN ATTORNEYS-AT-LAW</span>
             </p>
             <ul>
-                <li>臺中市西區英才路530號19樓之6</li>
-                <li>04-23012868</li>
+                <li><a href="https://maps.app.goo.gl/5EUToJSr8MEnYPnS9">臺中市西區英才路530號19樓之6</a></li>
+                <li><a href="tel:+886-4-23012868" target="_blank">04-23012868</a></li>
                 <li><a href="mailto:service@chunshanlaw.com" target="_blank">service@chunshanlaw.com</a></li>
             </ul>
         </footer>
+
+
+        <div class="fixed_links">
+            <ul>
+                <li>
+                    <a href="https://lin.ee/W0lM7lG" target="_blank" title="官方 Line @"><img src="img/line.svg" /></a>
+                </li>
+                <li>
+                    <a href="https://maps.app.goo.gl/5EUToJSr8MEnYPnS9" target="_blank" title="Google Map 導航"><img src="img/googlemap.svg" /></a>
+                </li>
+                <li>
+                    <a href="tel:+886-4-23012868" target="_blank" title="撥打電話"><img src="img/phone.svg" /></a>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
@@ -225,39 +238,6 @@
                 $('.menu').find('img').attr('src', 'img/menu.svg')
             }
         })
-
-        // $('nav > ul > li').click(function () {
-        //     var idName = $(this).attr('for')
-        //     var mediaLaptop = window.matchMedia('(max-width: 1024px)')
-
-        //     $('nav').removeClass('active')
-        //     $('.menu img').attr('src', 'img/menu.svg')
-
-        //     if (idName === 'home') {
-        //         $('html,body').animate({ scrollTop: 0 }, 500)
-        //     } else {
-        //         if (mediaLaptop.matches) {
-        //             if (idName === 'attorneys') {
-        //                 var targetOffset = $('#' + idName).offset().top
-        //                 $('html,body').animate({ scrollTop: targetOffset }, 500)
-        //             } else {
-        //                 var targetOffset = $('#' + idName).offset().top
-        //                 $('html,body').animate({ scrollTop: targetOffset - 200 }, 500)
-        //             }
-        //         } else {
-        //             if (idName === 'about') {
-        //                 var targetOffset = $('#' + idName).offset().top
-        //                 $('html,body').animate({ scrollTop: targetOffset }, 500)
-        //             } else if (idName === 'attorneys') {
-        //                 var targetOffset = $('#' + idName).offset().top
-        //                 $('html,body').animate({ scrollTop: targetOffset + 200 }, 500)
-        //             } else {
-        //                 var targetOffset = $('#' + idName).offset().top
-        //                 $('html,body').animate({ scrollTop: targetOffset + 120 }, 500)
-        //             }
-        //         }
-        //     }
-        // })
     </script>
 </body>
 

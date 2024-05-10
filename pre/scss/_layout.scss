@@ -466,3 +466,34 @@ footer {
         }
     }
 }
+
+.fixed_links {
+    position: fixed;
+    bottom: size(40);
+    right: size(20);
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: size(12);
+
+        li {
+            width: size(44);
+            height: size(44);
+            opacity: .5;
+            transition: opacity .2s;
+
+            @include hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    @include max-to(phone) {
+        ul {
+            li {
+                opacity: .8;
+            }
+        }
+    }
+}
