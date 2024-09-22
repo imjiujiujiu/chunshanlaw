@@ -26,14 +26,13 @@
         gtag('event', 'conversion', {'send_to': 'AW-11329157872/fdP_CKvWiJ8ZEPD1lJoq'});
         gtag('config', 'AW-11329157872');
     </script> -->
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCT7C9ES93"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('event', 'conversion', {'send_to': 'AW-11329157872/fdP_CKvWiJ8ZEPD1lJoq'});
+        // gtag('event', 'conversion', {'send_to': 'AW-11329157872/fdP_CKvWiJ8ZEPD1lJoq'});
 
         // Google Analytics 配置
         gtag('config', 'G-ZCT7C9ES93');
@@ -203,7 +202,7 @@
         <div class="fixed_links">
             <ul>
                 <li>
-                    <a href="https://lin.ee/W0lM7lG" target="_blank" title="官方 Line @"><img src="img/line.svg" /></a>
+                    <a id="line" href="https://lin.ee/W0lM7lG" target="_blank" title="官方 Line @"><img src="img/line.svg" /></a>
                 </li>
                 <li>
                     <a href="https://maps.app.goo.gl/6YX8FLkDMxwkMbx88" target="_blank" title="Google Map 導航"><img src="img/googlemap.svg" /></a>
@@ -254,6 +253,10 @@
                 $('.menu').find('img').attr('src', 'img/menu.svg')
             }
         })
+
+        $('#line').click(function() {
+            gtag('event', 'conversion', {'send_to': 'AW-11329157872/fdP_CKvWiJ8ZEPD1lJoq'});
+        });
     </script>
 </body>
 
