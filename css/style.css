@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* reset css */
-@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+TC:wght@200..900&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -518,7 +518,7 @@ html {
 }
 
 * {
-  font-family: "Jin Xuan", "Noto Serif TC", serif;
+  font-family: "Cactus Classical Serif", "Noto Serif TC", serif;
   scroll-behavior: smooth;
 }
 
@@ -527,7 +527,7 @@ body {
   background-image: url(../img/bg.png);
   background-color: #fcfcfd;
   line-height: 2;
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #3E3A39;
   width: 100dvw;
@@ -560,7 +560,7 @@ h2::after {
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 600;
   letter-spacing: 0.125rem;
   text-align: center;
@@ -568,8 +568,9 @@ h3 {
 }
 h3 span {
   display: block;
-  font-size: 1rem;
-  letter-spacing: 0.6875rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.75rem;
+  margin-left: 0.375rem;
   transform: translateX(0.0625rem);
   overflow: hidden;
 }
@@ -730,7 +731,7 @@ nav {
   z-index: 5;
 }
 nav ul {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   display: flex;
   flex-wrap: wrap;
@@ -803,6 +804,7 @@ nav ul li:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
+  font-size: 1rem;
 }
 .deco li {
   flex: 100%;
@@ -842,23 +844,9 @@ section::before {
 #about {
   height: 90svw;
 }
-#about::before {
-  background-image: url(../img/mountain-1.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  left: -60svw;
-  right: -20svw;
-  top: 0;
-  bottom: 0;
-}
 
 #attorneys {
   padding: 10svw 10svw 3.75rem 25svw;
-  background-image: url(../img/mountain-3.svg);
-  background-repeat: no-repeat;
-  background-position: bottom right -15svw;
-  background-size: 65svw;
   position: relative;
 }
 #attorneys > div {
@@ -867,10 +855,17 @@ section::before {
   gap: 2.5rem;
   margin-bottom: 18.75rem;
 }
-#attorneys > div h3 {
+#attorneys > div .title {
   flex: 100%;
+  display: flex;
+  flex-direction: column;
   margin-left: 20svw;
-  text-align: left;
+}
+#attorneys > div .title h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline;
+  text-align: center;
 }
 #attorneys > div .photo {
   flex: calc(20svw - 2.5rem);
@@ -897,16 +892,18 @@ section::before {
   z-index: -1;
 }
 #attorneys::before {
-  content: url(../img/mountain-2.svg);
-  top: 27%;
+  content: url(../img/mountain-1.svg);
+  width: 100svw;
+  top: 23%;
   right: -10svw;
-  width: 50svw;
+  transform: rotateY(180deg);
 }
 #attorneys::after {
-  content: url(../img/mountain-1.svg);
-  top: 57%;
-  left: -15svw;
-  width: 70svw;
+  content: url(../img/mountain-3.svg);
+  width: 60svw;
+  top: 63%;
+  left: -5svw;
+  transform: rotateY(180deg);
 }
 @media (max-width: 64rem) {
   #attorneys {
@@ -956,34 +953,77 @@ section::before {
 
 #contact {
   padding-top: 10svw;
-}
-
-#contact,
-#partner {
-  position: relative;
   padding-bottom: 30svw;
+  position: relative;
 }
-#contact::before,
-#partner::before {
-  position: absolute;
-  z-index: -1;
-  content: url(../img/mountain-1.svg);
-  bottom: -10svw;
-  left: -40svw;
-  width: 160svw;
+#contact::before {
+  content: url(../img/mountain-2.svg);
+  bottom: 12svw;
+  left: -10svw;
+  width: 60svw;
 }
 @media (max-width: 64rem) {
-  #contact::before,
-  #partner::before {
+  #contact {
+    padding-left: 20svw !important;
+  }
+  #contact::before {
     bottom: 0;
+    width: 90svw;
+  }
+}
+@media (max-width: 32.25rem) {
+  #contact {
+    padding-left: 2rem !important;
+  }
+}
+
+#client {
+  padding: 9rem 9rem 6.25rem 27.5rem;
+}
+#client dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  margin-bottom: 3rem;
+}
+#client dl dt {
+  font-weight: 900;
+  flex: 100%;
+  border-bottom: 0.0625rem solid rgba(35, 24, 21, 0.3);
+}
+#client dl dd {
+  flex: calc(50% - 2rem);
+  max-width: calc(50% - 2rem);
+  font-weight: 100;
+  line-height: 1.5;
+  padding: 0.25rem 0rem;
+  word-break: break-all;
+  display: list-item;
+  list-style-type: disc;
+  margin-left: 1.25rem;
+}
+@media (max-width: 64rem) {
+  #client {
+    margin-left: 20svw;
+  }
+}
+@media (max-width: 32.25rem) {
+  #client {
+    margin-left: 0;
+  }
+  #client dl dd {
+    flex: 100%;
+    max-width: 100%;
   }
 }
 
 footer {
   text-align: center;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   font-weight: 300;
-  padding: 3.75rem;
+  padding: 30svw 3.75rem 3.75rem;
+  position: relative;
+  overflow: hidden;
 }
 footer span + span {
   margin-left: 2.5rem;
@@ -992,6 +1032,7 @@ footer ul {
   text-align: center;
   line-height: 1.5;
   overflow: hidden;
+  margin-top: 0.625rem;
 }
 footer ul li {
   display: inline-block;
@@ -1000,9 +1041,17 @@ footer ul li {
 footer ul li:not(:last-child)::after {
   content: "｜";
 }
+footer::before {
+  position: absolute;
+  z-index: -1;
+  content: url(../img/mountain-1.svg);
+  bottom: -15svw;
+  left: -40svw;
+  width: 160svw;
+}
 @media (max-width: 64rem) {
   footer {
-    padding: 3.75rem 1rem 1.25rem;
+    padding: 15rem 1rem 1.25rem;
   }
   footer span {
     display: block;
@@ -1012,6 +1061,11 @@ footer ul li:not(:last-child)::after {
   }
   footer ul {
     flex-wrap: wrap;
+  }
+  footer::before {
+    bottom: -6.25rem;
+    left: -10svw;
+    width: 130svw;
   }
 }
 
