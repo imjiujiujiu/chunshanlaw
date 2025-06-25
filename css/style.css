@@ -123,26 +123,10 @@ button {
   border: 0;
 }
 
-@font-face {
-  font-family: "Jin Xuan";
-  font-weight: 300;
-  src: url("../vendor/fonts/jf-jinxuan-3.1-light.woff") format("woff"), url("../vendor/fonts/jf-jinxuan-3.1-light.ttf") format("truetype"), url("../vendor/fonts/jf-jinxuan-3.1-light.eot") format("embedded-opentype");
+.noto-serif {
+  font-family: "Noto Serif TC";
 }
-@font-face {
-  font-family: "Jin Xuan";
-  font-weight: 400;
-  src: url("../vendor/fonts/jf-jinxuan-3.1-regular.woff") format("woff"), url("../vendor/fonts/jf-jinxuan-3.1-regular.ttf") format("truetype"), url("../vendor/fonts/jf-jinxuan-3.1-regular.eot") format("embedded-opentype");
-}
-@font-face {
-  font-family: "Jin Xuan";
-  font-weight: 600;
-  src: url("../vendor/fonts/jf-jinxuan-3.1-semibold.woff") format("woff"), url("../vendor/fonts/jf-jinxuan-3.1-semibold.ttf") format("truetype"), url("../vendor/fonts/jf-jinxuan-3.1-semibold.eot") format("embedded-opentype");
-}
-@font-face {
-  font-family: "Jin Xuan";
-  font-weight: 900;
-  src: url("../vendor/fonts/jf-jinxuan-3.1-extrabold.woff") format("woff"), url("../vendor/fonts/jf-jinxuan-3.1-extrabold.ttf") format("truetype"), url("../vendor/fonts/jf-jinxuan-3.1-extrabold.eot") format("embedded-opentype");
-}
+
 button,
 input[type=submit] {
   background: transparent;
@@ -199,9 +183,6 @@ form input[type=text] {
   border: none;
   background: transparent;
 }
-form input[type=text]::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
 form input[type=text]::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -216,9 +197,6 @@ form input[disabled] {
   color: rgba(255, 255, 255, 0.5);
   cursor: default;
   border-color: rgba(255, 255, 255, 0.3);
-}
-form input[disabled]::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.5);
 }
 form input[disabled]::placeholder {
   color: rgba(255, 255, 255, 0.5);
@@ -286,7 +264,6 @@ form input[disabled]:hover {
   margin-right: -1.5rem;
   padding-right: 1.5rem;
   max-height: calc(80svh - 12.25rem);
-  min-height: -moz-max-content;
   min-height: max-content;
 }
 .popUp .popUp--container h3 {
@@ -423,8 +400,7 @@ table tbody tr:last-child td:last-child {
   color: white;
   font-family: "Outfit", Arial, sans-serif;
   transition: transform 0.2s;
-  -webkit-backdrop-filter: blur(0.0625rem);
-          backdrop-filter: blur(0.0625rem);
+  backdrop-filter: blur(0.0625rem);
 }
 .slick .slick-arrow::before {
   opacity: 1;
@@ -544,7 +520,6 @@ h2 {
   font-size: 3rem;
   letter-spacing: 0.0625rem;
   font-weight: 400;
-  min-width: -moz-max-content;
   min-width: max-content;
   position: relative;
   margin-bottom: 7.5rem;
@@ -689,8 +664,7 @@ header .menu {
     z-index: 8;
     display: flex;
     justify-content: space-between;
-    -webkit-backdrop-filter: blur(0.125rem);
-            backdrop-filter: blur(0.125rem);
+    backdrop-filter: blur(0.125rem);
     background-color: rgba(238, 240, 242, 0.5);
     background-image: url(../img/bg.png);
   }
@@ -714,8 +688,7 @@ header .menu {
   header {
     background-image: none;
     background-color: transparent;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
     background: linear-gradient(to bottom, rgba(238, 240, 242, 0.8) 0%, rgba(238, 240, 242, 0.5) 30%, rgba(238, 240, 242, 0) 100%);
   }
   header .main-logo {
@@ -736,7 +709,6 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
-  width: -moz-min-content;
   width: min-content;
   margin-top: 0;
 }
@@ -761,8 +733,7 @@ nav ul li:hover {
     bottom: 100%;
     transform: none;
     background-color: rgba(250, 252, 250, 0.9);
-    -webkit-backdrop-filter: blur(0.125rem);
-            backdrop-filter: blur(0.125rem);
+    backdrop-filter: blur(0.125rem);
     background-color: rgba(238, 240, 242, 0.5);
     background-image: url(../img/bg.png);
     z-index: 5;
@@ -862,7 +833,6 @@ section::before {
   margin-left: 20svw;
 }
 #attorneys > div .title h3 {
-  width: -moz-fit-content;
   width: fit-content;
   display: inline;
   text-align: center;
@@ -1094,4 +1064,4 @@ footer::before {
   .fixed_links ul li {
     opacity: 0.8;
   }
-}/*# sourceMappingURL=style.css.map */
+}
