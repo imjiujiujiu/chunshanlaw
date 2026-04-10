@@ -102,7 +102,7 @@ q:after {
 }
 
 :focus {
-  outline: 0;
+  outline-color: transparent;
 }
 
 ins {
@@ -553,10 +553,12 @@ h3 span {
 a {
   color: #3E3A39;
   transition: color 0.2s;
-  text-decoration: none;
 }
 a:hover {
   color: #718530;
+}
+a {
+  text-decoration: none;
 }
 
 ul {
@@ -716,11 +718,13 @@ nav ul li {
   flex: 100%;
   color: #3E3A39;
   transition: color 0.2s;
-  cursor: pointer;
-  word-break: keep-all;
 }
 nav ul li:hover {
   color: #718530;
+}
+nav ul li {
+  cursor: pointer;
+  word-break: keep-all;
 }
 @media (max-width: 64rem) {
   nav {
